@@ -8,11 +8,8 @@ public class ArrayElementSearch {
       if (arr[index] == key) {
         return index;
       }
-      if (index == arr.length - 1) {
-        return -1;
-      }
     }
-    return 0;
+    return -1;
   }
 
   public static int binarySearch(int arr[], int key) {
@@ -33,7 +30,12 @@ public class ArrayElementSearch {
     return -1;
   }
 
-  public static int binarySearchRecursion(int arr[], int low, int high, int key) {
+  public static int binarySearchRecursion(
+    int arr[],
+    int low,
+    int high,
+    int key
+  ) {
     if (high >= low) {
       int mid = low + (high - low) / 2;
       if (arr[mid] == key) {
